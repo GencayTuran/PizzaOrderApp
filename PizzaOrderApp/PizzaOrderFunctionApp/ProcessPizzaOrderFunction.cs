@@ -3,7 +3,6 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using PizzaOrderFunctionApp.Data;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace PizzaOrderFunctionApp;
 
@@ -33,6 +32,8 @@ public class ProcessPizzaOrderFunction
 
             //deserialize
             PizzaOrderMessageDto messageDto = JsonSerializer.Deserialize<PizzaOrderMessageDto>(serviceBusMessage.ToString())!;
+
+            //validate dtos
 
             //send to service
 
