@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PizzaOrderFunctionApp.Data
+namespace Application.Data
 {
-    internal class DeliveryDto
+    public class DeliveryDto
     {
-        [Required]
         public int DeliveryType { get; set; }
 
         public DateTime? DeliveryDateTime { get; set; } //empty datetime = asap delivery
